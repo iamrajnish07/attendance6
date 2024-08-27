@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="website icon" type="jpg" href="./attendance.png">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="html2canvas.min.js"></script>
+<title>ATTENDANCE WEBSITE</title>
+<style>
+body{
+        font-family: Arial, sans-serif;
+}
+.top,.bottom{
+    background-color: purple;
+}
+label{
+        margin-left: 20px;
+        font-size: 20px;
+}
+P{
+    font-size: 18PX;
+    font-weight: 600;
+    font-style: italic;
+}
+button{
+    transition: 0.5s;
+    font-weight: 600;
+}
+button:hover{
+    background-color: purple;
+}
+h1{
+    font-style: italic;
+}
+select{
+    height: 32px;
+    font-weight: 700;
+}
+option{
+    font-weight: 700;
+}
+.bottom{
+    font-size: 12px;
+}
+</style>
+</head>
+<body>
+    <div class="top container-fluid text-center p-3 text-white">
+        <h1>STUDENTS LIST</h1>
+    </div><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 1. AHMAD ZAID KHAN</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 2. ANAS</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 3. ANIMESH KUMAR</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 4. ANISHA KUMARI JHA</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 5. CHANDRA PRAKASH</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 6. GOPAL KUMAR JHA</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 7. HARSH CHAUBEY</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 8. JIWAN BOGATI</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 9. KHUSHI CHAUHAN</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 10. KRITIKA SINGH</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 11. MEGHA</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 12. NANDINI BHARDWAJ</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 13. NISHAN KHARAL</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 14. NISHANT KUMAR SINGH</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 15. NITIN KUMAR</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 16. PALAK ASTWAL</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 17. PANKAJ SINGH YADAV</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 18. PAWAN KUMAR</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 19. PIYUSH CHAUHAN</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 20. PIYUSH GUPTA</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 21. PIYUSH MISHRA</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 22. POOJA KUMARI YADAV</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 23. PRAGYA NAMDEV</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 24. PRAJWAL KUMAR</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 25. PRANJAL RAJ</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 26. PRASHANT</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 27. PRASHANT KUMAR</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 28. PRAVEEN KUMAR</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 29. PRAVEEN KUMAR SAHU</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 30. PRAVESH PANT</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 31. PREM KISHAN</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 32. PRINCE CHAUHAN</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 33. PRINCE SINGH</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 34. PRIYAM KUMAR SINGH</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 35. PRIYANKA RAWAT</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 36. PRIYANSHU BHARGAVA</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 37. PRIYANSHU PANWAR</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 38. RAGHAV SRIVASTAVA</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 39. RAHUL SHARMA</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 40. RAHUL KUMAR GUPTA</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 41. RAJNISH SHARMA</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 42. RASHI VERMA</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 43. RAUSHAN KUMAR</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 44. RISHABH ARYA</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 45. RITESH PANDEY</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 46. RITESH VERMA</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 47. RITIK KUMAR GUPTA</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 48. RIYA RAI</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 49. ROHIT CHOUDHARY</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 50. ROHIT KUMAR (041)</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 51. SACHIN KUMAR</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 52. SACHIN SHARMA</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 53. SAGAR GAUTAM</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 54. SAHIL</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 55. SAKSHI JAIN</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 56. SAMBHAV KUMAR</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 57. SAMIR HUSSAIN</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 58. SANIA ANSARI</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 59. SANJEEV PANDEY</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 60. SANSKRITI SINGH</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 61. SAQUIB HASAN</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 62. SARTHAK SAINI</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 63. SARVESH SUDHANSHU</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 64. SATAKSHI TYAGI</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 65. SAURABH KUMAR</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 66. SHISIR SHAHI</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 67. SUSHANT KUMAR</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 68. VINIKA SAUD</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 69. ROSHAN CHOUDHARY</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 70. PRATIK KUMAR</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 71. ANUSHKA </label><br><br>
+
+    <button style="margin-left: 20px;" onclick="getCheckedValues()">Preview</button><br><br>
+
+
+    <div id="invoice">
+        <div class="top container-fluid text-center text-white">
+            <h1>ABSENT STUDENTS</h1>
+        </div>
+        <div class="row mt-3">
+            <p class="col-sm-2">B.TECH (CSE) SEC-6</p>
+            <p id="date" class="col-sm-2"></p>
+            <p id="day" class="col-sm-2"></p>
+            <p id="time" class="col-sm-2"></p>
+            <select class="col-sm-2" >
+                <option>SELECT SUBJECT</option>
+                <option>Linux and Open Source</option>
+                <option>Data Structure & Programming</option>
+                <option>Database Management System</option>
+                <option>Digital Electronics</option>
+                <option>Discrete Design Structure</option>
+                <option>Communication and Professional Skills III</option>
+                <option>Data Structure Programming Lab</option>
+            </select>
+
+            <p class="col-sm-2"><button id="dl-png">Download</button></p>
+        </div><br>
+        <div id="result"></div><br>
+        <nav class="bottom container-fluid text-center p-2 text-white">© Design and Created by Rajnish Sharma Founder & CEO of Rixi Lab.</nav>
+    </div>
+
+
+    <!-- #######  JS FOR ONLY SELECT VALUE GET   #######  -->
+
+    <script>
+        function getCheckedValues() {
+            const checkboxes = document.querySelectorAll('.checkbox');
+            let checkedValues = [];
+
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    checkedValues.push(checkbox.parentElement.textContent.trim());
+                }
+            });
+
+            document.getElementById('result').textContent = checkedValues.join(', ');
+        }
+    </script>
+
+
+    <script>
+        // Function to get the current date, day, and time
+        function displayDateTime() {
+            var now = new Date();
+
+            // Display date
+            var dateElement = document.getElementById("date");
+            var dateString = now.toDateString();
+            dateElement.textContent = "Date: " + dateString;
+
+            // Display day
+            var dayElement = document.getElementById("day");
+            var dayString = now.toLocaleDateString('en-US', { weekday: 'long' });
+            dayElement.textContent = "Day: " + dayString;
+
+            // Display time
+            var timeElement = document.getElementById("time");
+            var timeString = now.toLocaleTimeString();
+            timeElement.textContent = "Time: " + timeString;
+        }
+
+        // Call the function initially
+        displayDateTime();
+
+        // Update the date, day, and time every second
+        setInterval(displayDateTime, 1000);
+    </script>
+
+
+
+
+    <!-- #######  JS FOR DOWNLOAD PAGE   #######  -->
+    <script src="html2canvas.min.js"></script>
+    <script>
+        document.getElementById("dl-png").onclick = function() {
+            const screenshotTarget = document.getElementById("invoice");
+            
+            html2canvas(screenshotTarget).then((canvas) => {
+                const base64image = canvas.toDataURL("image/png");
+                var anchor = document.createElement('a');
+                anchor.setAttribute("href", base64image);
+                anchor.setAttribute("download", "attendance.png");
+                anchor.click();
+                anchor.remove();
+            });
+        };
+    </script>
+
+</body>
+</html>
