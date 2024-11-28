@@ -62,6 +62,12 @@ option{
     <div class="top container-fluid text-center p-3 text-white">
         <h1>STUDENTS LIST</h1>
     </div><br>
+
+    <label>
+        <input type="checkbox" class="form-check-input" id="selectAll">
+        <b>Select All</b>
+    </label>
+    <br>
     <label><input type="checkbox" class="checkbox form-check-input"> 1. AHMAD ZAID KHAN</label><br>
     <label><input type="checkbox" class="checkbox form-check-input"> 2. ANAS</label><br>
     <label><input type="checkbox" class="checkbox form-check-input"> 3. ANIMESH KUMAR</label><br>
@@ -125,14 +131,14 @@ option{
     <label><input type="checkbox" class="checkbox form-check-input"> 61. SAQUIB HASAN</label><br>
     <label><input type="checkbox" class="checkbox form-check-input"> 62. SARTHAK SAINI</label><br>
     <label><input type="checkbox" class="checkbox form-check-input"> 63. SARVESH SUDHANSHU</label><br>
-    <label><input type="checkbox" class="checkbox form-check-input"> 64. SAURABH KUMAR</label><br>
-    <label><input type="checkbox" class="checkbox form-check-input"> 65. SHISIR SHAHI</label><br>
-    <label><input type="checkbox" class="checkbox form-check-input"> 66. SUSHANT KUMAR</label><br>
-    <label><input type="checkbox" class="checkbox form-check-input"> 67. VINIKA SAUD</label><br>
-    <label><input type="checkbox" class="checkbox form-check-input"> 68. ROSHAN CHOUDHARY</label><br>
-    <label><input type="checkbox" class="checkbox form-check-input"> 69. ANUSHKA RICHA</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 64. SATAKSHI TYAGI</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 65. SAURABH KUMAR</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 66. SHISIR SHAHI</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 67. SUSHANT KUMAR</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 68. VINIKA SAUD</label><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 69. ROSHAN CHOUDHARY</label><br>
     <label><input type="checkbox" class="checkbox form-check-input"> 70. PRATIK KUMAR</label><br>
-    <label><input type="checkbox" class="checkbox form-check-input"> 71. ABHISHEK kUMAR</label><br><br>
+    <label><input type="checkbox" class="checkbox form-check-input"> 71. ANUSHKA RICHA</label><br><br>
 
     <button style="margin-left: 20px;" onclick="getCheckedValues()">Preview</button><br><br>
 
@@ -235,6 +241,58 @@ option{
           });
         });
       </script>
+
+
+<!-- #######  JS FOR MARK ALL CHECKBOXS   #######  -->
+<script>
+    const selectAllCheckbox = document.getElementById('selectAll');
+const itemCheckboxes = document.querySelectorAll('.checkbox');
+
+// Function to save the checkbox states to localStorage
+function saveStates() {
+const states = {
+    selectAll: selectAllCheckbox.checked,
+    items: Array.from(itemCheckboxes).map((checkbox) => checkbox.checked),
+};
+localStorage.setItem('checkboxStates', JSON.stringify(states));
+}
+
+// Function to load the checkbox states from localStorage
+function loadStates() {
+const savedStates = JSON.parse(localStorage.getItem('checkboxStates'));
+if (savedStates) {
+    selectAllCheckbox.checked = savedStates.selectAll;
+    itemCheckboxes.forEach((checkbox, index) => {
+        checkbox.checked = savedStates.items[index];
+    });
+}
+}
+
+// Add event listener to "Select All" checkbox
+selectAllCheckbox.addEventListener('change', () => {
+const isChecked = selectAllCheckbox.checked;
+itemCheckboxes.forEach((checkbox) => {
+    checkbox.checked = isChecked;
+});
+saveStates(); // Save states whenever the "Select All" checkbox changes
+});
+
+// Add event listeners to individual checkboxes
+itemCheckboxes.forEach((checkbox) => {
+checkbox.addEventListener('change', () => {
+    if (!checkbox.checked) {
+        selectAllCheckbox.checked = false; // Uncheck "Select All" if any item is unchecked
+    } else if (Array.from(itemCheckboxes).every((cb) => cb.checked)) {
+        selectAllCheckbox.checked = true; // Check "Select All" if all items are checked
+    }
+    saveStates(); // Save states whenever an individual checkbox changes
+});
+});
+
+// Load saved states on page load
+document.addEventListener('DOMContentLoaded', loadStates);
+
+</script>
 
 </body>
 </html>
